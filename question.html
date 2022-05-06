@@ -64,7 +64,7 @@
                 </van-button>
             </div>
             <div style="margin-top: 10vh" class="public_hr" ></div>
-            <van-button type="primary" url="https://gitee.com/wanghuayang3819/question-web">码云地址 <van-icon name="smile" /></van-button>
+            <van-button type="primary" @click="goGitee()">码云地址 <van-icon name="smile" /></van-button>
             <h4 >update date: 2022/5/6</h4>
         </div>
         <div v-else-if="!code_type">
@@ -2456,6 +2456,10 @@
                     num_state.choose = null;
                 };
 
+                /** go gitee */
+                const goGitee =()=>{
+                    window.open('https://gitee.com/wanghuayang3819/question-web','_blank');
+                }
 
                 return {
                     in_num,
@@ -2470,7 +2474,8 @@
                     num_state,
                     chooseItem,
                     goErr,
-                    reset
+                    reset,
+                    goGitee
                 };
             }
         };
