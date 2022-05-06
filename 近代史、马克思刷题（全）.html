@@ -67,6 +67,8 @@
             <van-button type="primary" @click="goGitee()">码云地址 <van-icon name="smile" /></van-button>
             <h4 >update date: 2022/5/6</h4>
         </div>
+		
+		
         <div v-else-if="!code_type">
             <h2>{{code}}</h2>
             <div v-for="(itm,idx) in sujectList" :key="idx">
@@ -99,7 +101,7 @@
                     </div>
                 </div>
                 <div v-else-if="['简答题','论述题'].includes(code_type) && questionLibraryItem[num_state.questionIndex]">
-                    <h3>{{num_state.questionIndex + 1}}、{{questionLibraryItem[num_state.questionIndex].title}}</h3>
+                    <h3>{{num_state.questionIndex + 1}}、{{questionLibraryItem[num_state.questionIndex].title}} <van-icon @click="searchTitle(questionLibraryItem[num_state.questionIndex].title)" name="search" /></h3>
                     <div>
                         <van-divider />
                     </div>
@@ -2460,7 +2462,13 @@
                 const goGitee =()=>{
                     window.open('https://gitee.com/wanghuayang3819/question-web','_blank');
                 }
-
+				
+				/** go baidu  */
+				const searchTitle = (title) =>{
+					console.log(title)
+					window.open('https://www.baidu.com/s?ie=UTF-8&wd=' + title ,'_blank')
+				};
+				
                 return {
                     in_num,
                     is_oredr,
@@ -2475,7 +2483,7 @@
                     chooseItem,
                     goErr,
                     reset,
-                    goGitee
+                    goGitee,searchTitle
                 };
             }
         };
