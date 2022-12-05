@@ -4,3 +4,4 @@
 #### 马克思主义基本原理概论(code 03709)
 
 ![image](https://user-images.githubusercontent.com/45450994/205540392-6bafe3e4-54b5-4389-9712-19ea63bc5d65.png)
+![image](https://user-images.githubusercontent.com/45450994/205540450-39f3d8d3-d7f2-4d98-bdbe-f0486ae5f236.png)
